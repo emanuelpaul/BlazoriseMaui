@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Components.WebView.Maui;
+﻿using Blazorise;
+using Blazorise.Icons.FontAwesome;
+using Blazorise.Icons.Material;
+using Blazorise.Material;
 using BlazoriseMaui.Data;
 
 namespace BlazoriseMaui;
@@ -15,11 +18,18 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
 
+		builder.Services.AddBlazorise(options =>
+		{
+			options.Immediate = false;
+		}).AddMaterialProviders()
+ 		  .AddMaterialIcons()
+		  .AddFontAwesomeIcons();
+
 		builder.Services.AddMauiBlazorWebView();
-		#if DEBUG
+#if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
-		
+
 		builder.Services.AddSingleton<WeatherForecastService>();
 
 		return builder.Build();
