@@ -31,7 +31,7 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)'=='net6.0-ios'">
+     <PropertyGroup Condition="'$(TargetFramework)'=='net6.0-ios'">
         <CodesignKey>your certificate</CodesignKey>
         <CodesignProvision>your provisioning profile</CodesignProvision>
     </PropertyGroup>
@@ -55,12 +55,12 @@
     </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Blazorise.Snackbar" Version="1.1.0" />
-		<PackageReference Include="Blazorise.SpinKit" Version="1.1.0" />
-		<PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.1.0" />
+		<PackageReference Include="Blazorise.Snackbar" Version="1.1.1" />
+		<PackageReference Include="Blazorise.SpinKit" Version="1.1.1" />
+		<PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.1.1" />
 
-		<PackageReference Include="Blazorise.Icons.Material" Version="1.1.0" />
-		<PackageReference Include="Blazorise.Material" Version="1.1.0" />
+		<PackageReference Include="Blazorise.Icons.Material" Version="1.1.1" />
+		<PackageReference Include="Blazorise.Material" Version="1.1.1" />
 	</ItemGroup>
 
 </Project>
