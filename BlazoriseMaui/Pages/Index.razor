@@ -1,3 +1,24 @@
 ﻿@page "/"
 
 <h3>Index page</h3>
+
+@* using a blazorise button doesn't work on phones. Tested and doesn't work on
+   iphone se 3 - iOS 16
+   iphone 6s - iOS 15.6.1
+    
+   tested on simulators and it works
+   - iphone se 3 - iOS 16
+   - iphone se 3 - iOS 15.4
+*@
+<Button Clicked="Increment">Test button</Button>
+
+@* using a normal button works on phone and simulator *@
+@* <button  @onclick="Increment">Test button</button> *@
+<br />
+@count
+
+@code {
+    int count = 0;
+
+    void Increment()=>count++;
+}
