@@ -26,9 +26,9 @@ public static class MauiProgram
 		  .AddFontAwesomeIcons();
 
 		builder.Services.AddMauiBlazorWebView();
-#if DEBUG
+// #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
-#endif
+// #endif
 
 		builder.Services.AddSingleton<WeatherForecastService>();
 
