@@ -2,6 +2,7 @@
 using Blazorise.Icons.FontAwesome;
 using Blazorise.Icons.Material;
 using Blazorise.Material;
+using BlazoriseMaui.BlazoriseWorkaround;
 using BlazoriseMaui.Data;
 
 namespace BlazoriseMaui;
@@ -24,6 +25,8 @@ public static class MauiProgram
 		}).AddMaterialProviders()
  		  .AddMaterialIcons()
 		  .AddFontAwesomeIcons();
+
+		builder.Services.AddScoped<IComponentDisposer, WorkaroundIComponentDisposer>();
 
 		builder.Services.AddMauiBlazorWebView();
 #if DEBUG
