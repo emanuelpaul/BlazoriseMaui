@@ -13,4 +13,12 @@
     {
         currentCount++;
     }
+
+    protected override void OnInitialized()
+    {
+        currentCount = StartCount;
+    }    
+
+    [Parameter,EditorRequired]
+     public virtual int StartCount {get; set;} 
 }
