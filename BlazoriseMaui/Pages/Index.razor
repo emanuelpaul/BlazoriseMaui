@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<Bar Mode=BarMode.VerticalInline>
+@* <Bar Mode=BarMode.VerticalInline>
     <BarBrand>
         Brandname
     </BarBrand>
@@ -31,4 +31,19 @@
             </BarItem>
         </BarEnd>
     </BarMenu>
-</Bar>
+</Bar> *@
+
+<Button Color="Color.Primary" Clicked="@OnButtonClicked">Click me</Button>
+<Span>
+    Clicked @counter times
+</Span>
+@code {
+    int counter;
+
+    Task OnButtonClicked()
+    {
+        counter++;
+
+        return Task.CompletedTask;
+    }
+}
